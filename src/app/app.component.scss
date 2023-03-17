@@ -1,0 +1,52 @@
+@import 'theme';
+
+.site-grid {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  height: 100%;
+}
+
+header {
+  border-bottom: 1px solid $darkest;
+}
+
+main {
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.brand {
+  padding: $padding 0;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.CTA-container {
+  button {
+    margin-right: $padding;
+    padding: 8px $padding;
+    cursor: pointer;
+    background-color: $brand;
+    border: none;
+    color: $text;
+
+    &:hover {
+      background-color: $brand-hover;
+    }
+
+    &:active {
+      box-shadow: inset 3px 3px 3px -1px $darkest;
+    }
+  }
+}
+
+.content {
+  height: 100%;
+}
+
+footer {
+  background-color: $darkest;
+  box-shadow: inset 0 3px 3px -2px #000;
+  padding: $padding * 2 0;
+}

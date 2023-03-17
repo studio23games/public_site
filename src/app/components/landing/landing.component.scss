@@ -1,0 +1,12 @@
+﻿@import 'theme';
+
+.hero {
+  padding: $padding * 3 0;
+  background-image: linear-gradient(to right, $background, $darkest);
+  h1 {
+    border-bottom: 1px solid transparentize($brand, .5);
+  }
+  p {
+    max-width: 60ch;
+  }
+}
