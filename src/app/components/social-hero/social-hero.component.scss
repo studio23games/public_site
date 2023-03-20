@@ -1,0 +1,64 @@
+﻿@import 'theme';
+
+$discord: #404eed;
+$youtube: #ff0000;
+$twitter: #1d9bf0;
+$twitch: #a970ff;
+
+.callout-wrapper {
+  background-color: $darkest;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: $padding;
+  padding: $padding;
+
+  section {
+    user-select: none;
+    height: 100%;
+    padding: $padding;
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(0deg, transparent, transparentize($text, 0.55));
+    }
+
+
+    & > div {
+      font-size: 1.3em;
+      border: 3px solid $text;
+      display: grid;
+      grid-template-rows: 1fr min-content;
+      height: 100%;
+
+      div {
+        &:first-of-type {
+          font-size: 3em;
+        }
+
+        padding: $padding;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+.discord {
+  background-color: $discord;
+}
+
+.youtube {
+  background-color: $youtube;
+}
+
+.twitter {
+  background-color: $twitter;
+}
+
+.twitch {
+  background-color: $twitch;
+}

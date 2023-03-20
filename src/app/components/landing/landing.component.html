@@ -5,6 +5,7 @@
       games </p>
   </div>
 </section>
+
 <section class="who-are-we">
   <div class="gutter">
     <app-team-info></app-team-info>
@@ -13,7 +14,16 @@
 
 <section class="project-countdown">
   <div class="gutter">
-    <h1 class="jumbo">Project Announcement</h1>
-    <app-countdown></app-countdown>
+    <h1 class="center-text">Project Announcement</h1>
+    <app-countdown (openModal)="openModal()"></app-countdown>
   </div>
 </section>
+
+<section class="callout">
+  <h1 class="center-text">Find us on social media</h1>
+  <app-social-hero></app-social-hero>
+</section>
+
+<app-modal [modalVisible$]="show$" (closeIntent)="closeModal()">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, pariatur.
+</app-modal>
