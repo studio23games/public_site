@@ -13,6 +13,7 @@ import {CommonModule} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ModalComponent} from "./components/modal/modal.component";
+import {FormLabelComponent} from "./components/form-label/form-label.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ModalComponent} from "./components/modal/modal.component";
     PanelComponent,
     CountdownComponent,
     SocialHeroComponent,
-    ModalComponent
+    ModalComponent,
+    FormLabelComponent
   ],
   imports: [
     BrowserModule,

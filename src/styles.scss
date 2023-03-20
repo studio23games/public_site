@@ -63,3 +63,16 @@ a {
 h1, h2, h3 {
   font-weight: 200;
 }
+
+
+input[type=text] {
+  background-color: $darkest;
+  border: 1px solid $text;
+  padding: calc($padding / 2);
+  width: 350px;
+  color: $text;
+  &:focus {
+    outline: none;
+    border-color: $brand;
+  }
+}

@@ -25,5 +25,14 @@
 </section>
 
 <app-modal [modalVisible$]="show$" (closeIntent)="closeModal()">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, pariatur.
+  <form [formGroup]="mailForm">
+    <app-form-label heading="E-mail" issue="Must be a valid E-mail" [valid]="emailValid()">
+      <input type="text" formControlName="email">
+    </app-form-label>
+    <br>
+    <app-form-label heading="Repeat E-mail" issue="E-mails do not match" [valid]="repeatValid()">
+      <input type="text" formControlName="repeat">
+    </app-form-label>
+
+  </form>
 </app-modal>

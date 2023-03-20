@@ -1,0 +1,28 @@
+﻿@import 'theme';
+
+.form-label-wrapper {
+  display: inline-grid;
+  grid-template-rows: min-content 1fr;
+  margin-bottom: $padding;
+  border: 1px solid transparent;
+  &.hasError {
+    border-color: #ff0000;
+  }
+
+  padding: calc($padding / 2);
+
+  .label {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 4px;
+
+    .error {
+      color: #ff0000;
+    }
+
+  }
+
+
+}
+

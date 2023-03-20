@@ -1,0 +1,9 @@
+﻿<div class="form-label-wrapper" [ngClass]="{hasError: !valid}">
+  <div class="label">
+    <div class="actual">{{heading}}</div>
+    <div class="error" *ngIf="!valid">{{issue}}</div>
+  </div>
+  <div class="input">
+    <ng-content></ng-content>
+  </div>
+</div>
