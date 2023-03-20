@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {UiStateService} from "./services/ui-state.service";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    discordLink = "https://discord.gg/KtDqaQJwNv";
+  constructor(private uiService: UiStateService) {
+  }
+
+  discordLink = "https://discord.gg/KtDqaQJwNv";
+
+  openModal() {
+    this.uiService.setShowForm(true);
+  }
+
 }

@@ -1,15 +1,19 @@
-﻿<div class="modal-backdrop" *ngIf="internalModalVisible$|async">
-  <div class="modal-wrapper">
-    <app-panel>
-      <div class="header">
-        <h2>Join our mailing list</h2>
-        <div (click)="closeModal()">
-          <span class="fa fa-close"></span>
+﻿<ng-container >
+  <div class="modal-backdrop" *ngIf="internalModalVisible$|async"  @fadeIn>
+    <div class="modal-wrapper" @childAnim>
+      <app-panel>
+        <div class="header">
+          <h2>Join our mailing list</h2>
+          <div (click)="closeModal()">
+            <span class="fa fa-close"></span>
+          </div>
         </div>
-      </div>
-      <div class="content">
-        <ng-content></ng-content>
-      </div>
-    </app-panel>
+        <div class="content">
+          <ng-content></ng-content>
+        </div>
+      </app-panel>
+    </div>
   </div>
-</div>
+</ng-container>
+
+
