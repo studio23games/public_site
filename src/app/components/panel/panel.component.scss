@@ -1,0 +1,10 @@
+﻿@import 'theme';
+
+.panel-wrapper {
+  margin: $padding 0;
+  height: 100%;
+  padding: $padding;
+  background-color: $surface;
+  border-radius: 4px;
+  box-shadow: 4px 4px 3px -2px $darkest;
+}

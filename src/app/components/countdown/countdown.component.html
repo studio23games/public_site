@@ -1,0 +1,24 @@
+﻿<div class="countdown-wrapper">
+  <aside>We'll be ready to tell you all about our next exciting project in...</aside>
+  <section>
+    <div>
+      <span>{{(countdown$|async)?.days}}</span>
+      <span>Days</span>
+    </div>
+    <div>
+      <span>{{(countdown$|async)?.hours}}</span>
+      <span>Hours</span>
+    </div>
+    <div>
+      <span>{{(countdown$|async)?.minutes}}</span>
+      <span>Minutes</span>
+    </div>
+    <div>
+      <span>{{(countdown$|async)?.seconds}}</span>
+      <span>Seconds</span>
+    </div>
+  </section>
+  <section class="cta">
+    <button>Get Notified</button>
+  </section>
+</div>

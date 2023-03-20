@@ -1,0 +1,77 @@
+﻿@import 'theme';
+
+.countdown-wrapper {
+  user-select: none;
+  padding: $padding;
+  box-shadow: 4px 4px 3px -2px #121212;
+  background-color: $background;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  border-radius: 4px;
+  row-gap: $padding * 2;
+
+  aside {
+    display: flex;
+    padding: $padding;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+      display: grid;
+      grid-template-rows: 1fr min-content;
+      height: 120px;
+      width: 120px;
+      border: 1px solid $darkest;
+      background-color: $surface;
+
+      span {
+        padding: calc($padding / 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-of-type {
+          font-size: 1.4em;
+          border-bottom: 1px solid $darkest;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.cta {
+
+  button {
+    background: none;
+    color: $text;
+    border: 1px solid $text;
+    padding: $padding;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $brand-hover;
+      color: $text;
+      border-color: transparent;
+    }
+
+    &:active {
+      border-color: transparent;
+      background-color: $brand;
+      box-shadow: inset 4px 4px 3px -2px #121212;
+    }
+
+
+  }
+}

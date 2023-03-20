@@ -1,0 +1,73 @@
+﻿<h1>Meet the team</h1>
+<app-panel>
+  <div class="team-grid">
+    <aside>
+      <h2 class="center-text">Members</h2>
+      <ng-container *ngFor="let member of members; let idx=index">
+        <div class="member-in-list" [ngClass]="{selected: idx == cur}" (click)="selectMember(idx)">
+          {{member}}
+        </div>
+      </ng-container>
+    </aside>
+    <section>
+      <ng-container *ngTemplateOutlet="selectedMember"></ng-container>
+    </section>
+  </div>
+</app-panel>
+
+
+<!-- ark -->
+<ng-template #teammate>
+  <div class="member-wrapper">
+    <div class="pfp-row">
+      <div class="pfp-ark pfp"></div>
+      <h2>Arkraga</h2>
+    </div>
+    <div>
+      <h3 class="tagline">Art, Gameplay, Story & Existential Dread</h3>
+      <p>
+        We're not 100% sure whether Arkraga is a feral artist or a cryptid. No one at the office has seen them, but
+        3d-models and other artworks keep appearing, so even though we've never seen them, we're relatively sure they
+        aren't imaginary.
+      </p>
+    </div>
+
+    <div class="social-links">
+
+        <a href="https://twitter.com/arkraga" target="_blank">
+          <span class="fab fa-twitter"></span> ArkRaga
+        </a>
+      <a href="https://twitch.tv/arkraga" target="_blank">
+        <span class="fab fa-twitch"></span> ArkRaga
+      </a>
+
+    </div>
+  </div>
+</ng-template>
+
+
+<!-- Dio -->
+<ng-template #teammate>
+  <div class="member-wrapper">
+    <div class="pfp-row">
+      <div class="pfp-dio pfp"></div>
+      <h2>Diogenic</h2>
+    </div>
+    <div>
+      <h3 class="tagline">Programming, Producing, and Coffee Consumption</h3>
+      <p>
+        Diogenic has spent several years in a delirious fog performing dark rites on a keyboard which they insist is
+        actually programming.
+        We're not quite sure they're right about that, but by golly they're the only person we've got for the job.
+      </p>
+    </div>
+    <div class="social-links">
+      <a href="https://twitter.com/bitsofthought" target="_blank">
+        <span class="fab fa-twitter"></span> BitsOfThought
+      </a>
+      <a href="https://twitch.tv/diogenic" target="_blank">
+        <span class="fab fa-twitch"></span> Diogenic
+      </a>
+    </div>
+  </div>
+</ng-template>
