@@ -1,5 +1,7 @@
 ﻿@import 'theme';
 
+@import 'theme';
+
 .countdown-wrapper {
   user-select: none;
   padding: $padding;
@@ -9,7 +11,11 @@
   grid-template-rows: min-content 1fr min-content;
   border-radius: 4px;
   row-gap: $padding * 2;
-  margin-bottom: $padding;
+  margin: $padding * 3 0;
+
+  h2 {
+    margin: 0;
+  }
 
   aside {
     display: flex;
@@ -22,15 +28,21 @@
   section {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+
 
     div {
       display: grid;
       grid-template-rows: 1fr min-content;
       height: 120px;
       width: 120px;
-      border: 1px solid $darkest;
-      background-color: $surface;
+      background-color: $darkest;
+      box-shadow: 0 0 4px -1px $text;
+
+      @include mobile {
+        width: 80px;
+        height: 80px;
+      }
 
       span {
         padding: calc($padding / 2);
@@ -40,7 +52,7 @@
 
         &:first-of-type {
           font-size: 1.4em;
-          border-bottom: 1px solid $darkest;
+          border-bottom: 1px solid $surface;
         }
       }
     }
@@ -56,8 +68,8 @@
     background: none;
     color: $text;
     border: 1px solid $text;
-    padding: $padding;
-    font-size: 1.5em;
+    padding: calc($padding / 2);
+    font-size: 1.2em;
     cursor: pointer;
     border-radius: 4px;
 

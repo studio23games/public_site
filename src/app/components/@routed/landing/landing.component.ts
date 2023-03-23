@@ -1,8 +1,8 @@
 ﻿import {Component, OnInit} from '@angular/core';
-import {UiStateService} from "../../services/ui-state.service";
+import {UiStateService} from "../../../services/ui-state.service";
+import {ConfirmService} from "../../../services/confirm.service";
 import {filter, Observable} from "rxjs";
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {ConfirmService} from "../../services/confirm.service";
 
 @Component({
   templateUrl: 'landing.component.html',
@@ -12,7 +12,6 @@ import {ConfirmService} from "../../services/confirm.service";
 export class LandingComponent implements OnInit {
 
   show$: Observable<boolean>
-
   mailForm: FormGroup;
 
 

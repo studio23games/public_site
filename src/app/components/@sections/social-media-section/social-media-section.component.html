@@ -1,0 +1,15 @@
+﻿<h1 class="center-text">Find us on social media</h1>
+
+<div class="link-wrapper">
+  <section *ngFor="let link of links" [class]="link.cls" (click)="clickLink(link.link)">
+    <div class="link-grid">
+      <div class="icon">
+        <span [class]="'fab ' + link.icon"></span>
+      </div>
+      <h2>{{link.tagline}}</h2>
+    </div>
+  </section>
+</div>
+
+
+<!--<app-social-hero></app-social-hero>-->

@@ -1,0 +1,22 @@
+﻿@import 'theme';
+
+:host {
+  display: block;
+}
+
+
+.app-section {
+  padding: calc($padding * 2) 0;
+}
+
+.topBorder {
+  border-top: 1px solid $darkest;
+}
+
+.bottomBorder {
+  border-bottom: 1px solid $darkest;
+}
+
+.noPadding {
+  padding: 0;
+}

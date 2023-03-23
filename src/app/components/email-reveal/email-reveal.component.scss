@@ -1,0 +1,11 @@
+﻿@import 'theme';
+
+
+.clickable {
+  color: $link-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}

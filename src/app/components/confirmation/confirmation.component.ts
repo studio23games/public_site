@@ -13,7 +13,6 @@ export class ConfirmationComponent implements OnInit {
     this.dismissAction();
   }
 
-
   link: string = "url";
   confirmText = "Proceed";
   rejectText = "Cancel";

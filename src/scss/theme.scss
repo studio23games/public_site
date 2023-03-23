@@ -1,7 +1,8 @@
 ﻿$text: #e0e0e0;
 $background: #282828;
 $surface: lighten($background, 3);
-
+$width-breakpoint: 960px;
+$width-breakpoint-mobile: 510px;
 
 $darkest: #151515;
 $brand: #fa5b3d;
@@ -11,3 +12,16 @@ $link-color: #ffae42;
 $link-color-hover: lighten($link-color, 15);
 
 $padding: 16px;
+
+
+@mixin tablet {
+  @media screen and (max-width: #{$width-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$width-breakpoint-mobile}) {
+    @content;
+  }
+}

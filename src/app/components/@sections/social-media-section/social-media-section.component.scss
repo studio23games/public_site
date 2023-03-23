@@ -1,0 +1,105 @@
+﻿@import 'theme';
+
+.link-wrapper {
+  background-color: $darkest;
+  border-radius: 6px;
+  box-shadow: 0 0 4px -1px #121212;
+  padding: $padding;
+  margin: 0 $padding;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: $padding;
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: $padding;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr
+  }
+
+}
+
+$discord: #404eed;
+$youtube: #ff0000;
+$twitter: #1d9bf0;
+$twitch: #a970ff;
+section {
+  user-select: none;
+  height: 100%;
+  padding: $padding;
+  cursor: pointer;
+
+  min-height: 300px;
+
+  @include tablet {
+    min-height: unset;
+  }
+
+
+  &:hover {
+    background-image: linear-gradient(0deg, transparent, transparentize($text, 0.55));
+  }
+
+  .link-grid {
+    border-radius: 6px;
+    font-size: 1.3em;
+    border: 3px solid $text;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    height: 100%;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+
+  & > div {
+    font-size: 1.3em;
+    border: 3px solid $text;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    height: 100%;
+
+    div {
+      &:first-of-type {
+        font-size: 3em;
+      }
+
+      padding: $padding;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+.discord {
+  background-color: $discord;
+}
+
+.youtube {
+  background-color: $youtube;
+}
+
+.twitter {
+  background-color: $twitter;
+}
+
+.twitch {
+  background-color: $twitch;
+}

@@ -1,6 +1,7 @@
 ﻿<div class="countdown-wrapper">
-  <aside>We'll be ready to tell you all about our next exciting project in...</aside>
-  <section>
+  <aside><h2>Unveiling our next project in...</h2></aside>
+  <section class="gutter">
+
     <div>
       <span>{{(countdown$|async)?.days}}</span>
       <span>Days</span>
@@ -19,6 +20,6 @@
     </div>
   </section>
   <section class="cta">
-    <button (click)="openModal.emit()">Get Notified</button>
+    <button (click)="toggleModal()">Get Notified</button>
   </section>
 </div>

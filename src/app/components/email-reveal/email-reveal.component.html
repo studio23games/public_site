@@ -1,0 +1,11 @@
+﻿<div class="reveal-container" (click)="reveal = true">
+  <ng-container *ngIf="reveal; else hidden">
+    {{emailText}}
+  </ng-container>
+</div>
+
+<ng-template #hidden>
+  <div class="clickable">
+    <span>Show E-mail</span>
+  </div>
+</ng-template>

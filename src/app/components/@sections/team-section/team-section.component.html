@@ -1,19 +1,23 @@
-﻿<h1>Meet the team</h1>
-<app-panel>
-  <div class="team-grid">
-    <aside>
-      <h2 class="center-text">Members</h2>
-      <ng-container *ngFor="let member of members; let idx=index">
-        <div class="member-in-list" [ngClass]="{selected: idx == cur}" (click)="selectMember(idx)">
-          {{member}}
-        </div>
-      </ng-container>
-    </aside>
-    <section>
-      <ng-container *ngTemplateOutlet="selectedMember"></ng-container>
-    </section>
+﻿<section class="who-are-we">
+  <div class="gutter">
+    <h1>Meet the team</h1>
+    <app-panel>
+      <div class="team-grid">
+        <aside>
+          <h2 class="center-text">Members</h2>
+          <ng-container *ngFor="let member of members; let idx=index">
+            <div class="member-in-list" [ngClass]="{selected: idx == cur}" (click)="selectMember(idx)">
+              {{member}}
+            </div>
+          </ng-container>
+        </aside>
+        <section>
+          <ng-container *ngTemplateOutlet="selectedMember"></ng-container>
+        </section>
+      </div>
+    </app-panel>
   </div>
-</app-panel>
+</section>
 
 
 <!-- ark -->
@@ -34,10 +38,10 @@
 
     <div class="social-links">
 
-        <a href="https://twitter.com/arkraga" target="_blank">
-          <span class="fab fa-twitter"></span> ArkRaga
-        </a>
-      <a href="https://twitch.tv/arkraga" target="_blank">
+      <a target="_blank" (click)="goToLink('https://twitter.com/arkraga')">
+        <span class="fab fa-twitter"></span> ArkRaga
+      </a>
+      <a target="_blank" (click)="goToLink('https://twitch.tv/arkraga')">
         <span class="fab fa-twitch"></span> ArkRaga
       </a>
 
@@ -62,10 +66,10 @@
       </p>
     </div>
     <div class="social-links">
-      <a href="https://twitter.com/bitsofthought" target="_blank">
+      <a target="_blank" (click)="goToLink('https://twitter.com/bitsofthought')">
         <span class="fab fa-twitter"></span> BitsOfThought
       </a>
-      <a href="https://twitch.tv/diogenic" target="_blank">
+      <a target="_blank" (click)="goToLink('https://twitch.tv/diogenic')">
         <span class="fab fa-twitch"></span> Diogenic
       </a>
     </div>

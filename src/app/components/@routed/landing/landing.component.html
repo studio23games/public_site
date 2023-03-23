@@ -1,0 +1,24 @@
+﻿<app-section [noPadding]="true">
+  <app-hero-section></app-hero-section>
+</app-section>
+<app-section [noPadding]="true">
+  <app-team-section></app-team-section>
+</app-section>
+<app-section [backgroundColor]="'#fa5b3d'" [bottomBorder]="true" [topBorder]="true">
+  <app-project-section></app-project-section>
+</app-section>
+<app-section>
+  <app-social-media-section></app-social-media-section>
+</app-section>
+
+<app-modal [modalVisible$]="show$" (closeIntent)="closeModal()">
+  <form [formGroup]="mailForm">
+    <app-form-label heading="E-mail" issue="Must be a valid E-mail" [valid]="emailValid()">
+      <input type="text" formControlName="email">
+    </app-form-label>
+    <br>
+    <app-form-label heading="Repeat E-mail" issue="E-mails do not match" [valid]="repeatValid()">
+      <input type="text" formControlName="repeat">
+    </app-form-label>
+  </form>
+</app-modal>
