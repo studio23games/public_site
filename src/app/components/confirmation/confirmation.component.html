@@ -1,0 +1,16 @@
+﻿<div class="backdrop">
+  <div class="confirm-dialog">
+    <app-panel [heightPx]="240">
+      <div class="panel-grid">
+        <div class="message-container">{{message}}</div>
+        <div class="link-preview">{{link}}</div>
+        <div class="buttons">
+          <button class="cancel" (click)="clickCancel()">{{rejectText}}</button>
+          <button (click)="clickConfirm()">{{confirmText}}</button>
+        </div>
+      </div>
+    </app-panel>
+
+
+  </div>
+</div>

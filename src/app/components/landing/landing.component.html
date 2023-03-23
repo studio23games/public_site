@@ -21,7 +21,7 @@
 
 <section class="callout">
   <h1 class="center-text">Find us on social media</h1>
-  <app-social-hero></app-social-hero>
+  <app-social-hero (linkClicked)="confirmLink($event)"></app-social-hero>
 </section>
 
 <app-modal [modalVisible$]="show$" (closeIntent)="closeModal()">

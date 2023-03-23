@@ -10,12 +10,10 @@ export class SocialHeroComponent implements OnInit {
 
   @Output() linkClicked: EventEmitter<string> = new EventEmitter<string>();
 
-  twitterLink = "";
-  twitchLink = "";
-  discordLink = "";
-  youtubeLink = "";
-
-
+  twitterLink = "https://twitter.com/studio23games";
+  twitchLink = "https://www.twitch.tv/studio23games";
+  discordLink = "https://discord.gg/KtDqaQJwNv";
+  youtubeLink = "https://www.youtube.com/@Studio23games";
 
   constructor() {
   }

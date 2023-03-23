@@ -14,6 +14,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ModalComponent} from "./components/modal/modal.component";
 import {FormLabelComponent} from "./components/form-label/form-label.component";
+import {ConfirmationComponent} from "./components/confirmation/confirmation.component";
+import {OutletProviderDirective} from "./directives/outlet-provider.directive";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,14 +28,17 @@ import {FormLabelComponent} from "./components/form-label/form-label.component";
     CountdownComponent,
     SocialHeroComponent,
     ModalComponent,
-    FormLabelComponent
+    FormLabelComponent,
+    ConfirmationComponent,
+    OutletProviderDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

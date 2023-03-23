@@ -69,7 +69,8 @@ input[type=text] {
   background-color: $darkest;
   border: 1px solid $text;
   padding: calc($padding / 2);
-  width: 350px;
+  width: 100%;
+  display: block;
   color: $text;
   &:focus {
     outline: none;

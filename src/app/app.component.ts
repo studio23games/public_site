@@ -11,8 +11,6 @@ export class AppComponent {
   constructor(private uiService: UiStateService) {
   }
 
-  discordLink = "https://discord.gg/KtDqaQJwNv";
-
   openModal() {
     this.uiService.setShowForm(true);
   }

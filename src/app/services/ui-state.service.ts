@@ -4,7 +4,7 @@ import {BehaviorSubject, Observable} from "rxjs";
 @Injectable({providedIn: 'root'})
 export class UiStateService {
 
-  showForm$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
+  showForm$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   setShowForm(bool: boolean) {
     this.showForm$.next(bool)

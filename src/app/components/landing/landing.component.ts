@@ -2,6 +2,7 @@
 import {UiStateService} from "../../services/ui-state.service";
 import {filter, Observable} from "rxjs";
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {ConfirmService} from "../../services/confirm.service";
 
 @Component({
   templateUrl: 'landing.component.html',
@@ -15,7 +16,7 @@ export class LandingComponent implements OnInit {
   mailForm: FormGroup;
 
 
-  constructor(private uiService: UiStateService, private fb: FormBuilder) {
+  constructor(private uiService: UiStateService, private fb: FormBuilder, private confirmService: ConfirmService) {
     this.show$ = uiService.getShowForm$();
     this.mailForm = fb.group({
       email: fb.nonNullable.control('', [Validators.required, Validators.email]),
@@ -54,6 +55,18 @@ export class LandingComponent implements OnInit {
       console.log("VALID!")
     }
   }
+
+  confirmLink(url: string) {
+    this.confirmService.confirmLink(
+      {
+        link: url,
+        confirmAction: () => {
+          window.open(url, "_blank")
+        },
+      })
+  }
+
+
 }
 
 function sameValueValidator(matchAgainst: string) {

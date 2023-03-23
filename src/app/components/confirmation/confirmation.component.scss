@@ -1,0 +1,79 @@
+﻿@import 'theme';
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparentize($brand, 0.65);
+  z-index: 10;
+}
+
+.confirm-dialog {
+  ::ng-deep {
+    .panel-wrapper {
+      padding: 0;
+    }
+  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.panel-grid {
+  height: 330px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  .message-container {
+    padding: $padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $darkest;
+  }
+
+  .link-preview {
+    color: $brand-hover;
+    padding: $padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons {
+    border-top: 1px solid $darkest;
+    padding: $padding;
+    display: flex;
+    button {
+      cursor: pointer;
+      background-color: $background;
+      border: 1px solid $darkest;
+      color: $text;
+      flex-grow:1;
+      padding: calc($padding / 2);
+      margin-right: $padding;
+      &:last-of-type {
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: lighten($background, 4);
+        background-image: radial-gradient(#00aa00 20%, #00aa0022);
+      }
+
+      &.cancel {
+        &:hover {
+          background-image: radial-gradient(#ff0000, #ff000022);
+        }
+      }
+
+
+    }
+  }
+}

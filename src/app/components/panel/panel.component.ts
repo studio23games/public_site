@@ -9,6 +9,7 @@
 export class PanelComponent implements OnInit {
 
   @Input() heightPx = 400;
+  @Input() widthPx = 400;
 
   constructor() {
   }
