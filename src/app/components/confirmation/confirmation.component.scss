@@ -18,6 +18,7 @@
       padding: 0;
     }
   }
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,21 +49,22 @@
     @include mobile {
       text-align: center;
     }
-
   }
 
   .buttons {
     border-top: 1px solid $darkest;
     padding: $padding;
     display: flex;
+
     button {
       cursor: pointer;
       background-color: $background;
       border: 1px solid $darkest;
       color: $text;
-      flex-grow:1;
+      flex-grow: 1;
       padding: calc($padding / 2);
       margin-right: $padding;
+
       &:last-of-type {
         margin: 0;
       }

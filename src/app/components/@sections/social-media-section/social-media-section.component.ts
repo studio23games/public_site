@@ -18,7 +18,7 @@ export class SocialMediaSectionComponent implements OnInit {
     {
       cls: "twitch",
       link: "https://www.twitch.tv/studio23games",
-      icon: "fa-discord",
+      icon: "fa-twitch",
       tagline: "Watch us on Twitch"
     },
     {
