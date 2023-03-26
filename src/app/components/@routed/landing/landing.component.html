@@ -12,7 +12,7 @@
 </app-section>
 
 <app-modal [modalVisible$]="show$" (closeIntent)="closeModal()">
-  <form [formGroup]="mailForm">
+  <form [formGroup]="mailForm" (ngSubmit)="submitForm()">
     <app-form-label heading="E-mail" issue="Must be a valid E-mail" [valid]="emailValid()">
       <input type="text" formControlName="email">
     </app-form-label>
@@ -20,5 +20,11 @@
     <app-form-label heading="Repeat E-mail" issue="E-mails do not match" [valid]="repeatValid()">
       <input type="text" formControlName="repeat">
     </app-form-label>
+    <app-checkmark formControlName="accept"
+                   description="I want to receive news and updates from Studio 23 about their products">
+    </app-checkmark>
+    <div class="btn-row">
+      <button class="form-submit" (click)="submitForm()">Submit</button>
+    </div>
   </form>
 </app-modal>

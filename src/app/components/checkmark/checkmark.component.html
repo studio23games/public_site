@@ -1,0 +1,8 @@
+﻿<div class="checkmark-wrapper" (click)="check()">
+  <div class="checkbox" [ngClass]="{checked: internalChecked}">
+    <ng-container *ngIf="internalChecked">
+      <span class="fa fa-check"></span>
+    </ng-container>
+  </div>
+  <div class="description">{{description}}</div>
+</div>

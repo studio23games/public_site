@@ -16,3 +16,27 @@
   font-size: 3em;
   text-align: center;
 }
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $padding;
+}
+
+
+button.form-submit {
+  background-color: $brand;
+  color: $text;
+  padding: calc($padding/2) $padding;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $brand-hover;
+  }
+
+  &:active {
+    box-shadow: inset 3px 3px 3px -1px #121212;
+  }
+}

@@ -19,9 +19,8 @@ export class LandingComponent implements OnInit {
     this.show$ = uiService.getShowForm$();
     this.mailForm = fb.group({
       email: fb.nonNullable.control('', [Validators.required, Validators.email]),
-      repeat: fb.nonNullable.control('', [Validators.required, Validators.email, sameValueValidator("email")]),
-      news: fb.nonNullable.control(false),
-      releases: fb.nonNullable.control(false)
+      repeat: fb.nonNullable.control('', [Validators.required, sameValueValidator("email")]),
+      accept: fb.nonNullable.control(false, [Validators.required]),
     });
     this.show$.pipe(filter(t => t)).subscribe(() => {
       this.mailForm.reset();
@@ -35,11 +34,6 @@ export class LandingComponent implements OnInit {
     this.uiService.setShowForm(false);
   }
 
-
-  openModal() {
-    this.uiService.setShowForm(true);
-  }
-
   emailValid() {
     return this.mailForm.get('email')!.valid || this.mailForm.get('email')!.pristine
   }
@@ -51,20 +45,10 @@ export class LandingComponent implements OnInit {
   submitForm() {
     if (this.mailForm.valid) {
       const {email, news, releases} = this.mailForm.getRawValue();
-      console.log("VALID!")
+      this.closeModal();
+      // TODO: POST EMAIL
     }
   }
-
-  confirmLink(url: string) {
-    this.confirmService.confirmLink(
-      {
-        link: url,
-        confirmAction: () => {
-          window.open(url, "_blank")
-        },
-      })
-  }
-
 
 }
 

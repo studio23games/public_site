@@ -1,0 +1,32 @@
+﻿@import 'theme';
+
+.checkmark-wrapper {
+  padding: $padding;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: $padding;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+  margin-right: $padding;
+  border: 1px solid $text;
+  flex-grow: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  transition: .1s ease-in-out;
+
+  &.checked {
+    background-color: $darkest;
+  }
+}
+
+.description {
+  text-align: center;
+}

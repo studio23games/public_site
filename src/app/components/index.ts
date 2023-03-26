@@ -5,6 +5,7 @@ import {FormLabelComponent} from "./form-label/form-label.component";
 import {ModalComponent} from "./modal/modal.component";
 import {PanelComponent} from "./panel/panel.component";
 import {SectionComponent} from "./section/section.component";
+import {CheckmarkComponent} from "./checkmark/checkmark.component";
 
 export const components = [
   ConfirmationComponent,
@@ -13,7 +14,8 @@ export const components = [
   FormLabelComponent,
   ModalComponent,
   PanelComponent,
-  SectionComponent
+  SectionComponent,
+  CheckmarkComponent
 ]
 
 export * from './confirmation/confirmation.component';
@@ -22,6 +24,7 @@ export * from './footer-content/footer-content.component';
 export * from './form-label/form-label.component';
 export * from './modal/modal.component';
 export * from './panel/panel.component';
+export * from './checkmark/checkmark.component';
 
 export * from './@routed';
 export * from './@sections';
