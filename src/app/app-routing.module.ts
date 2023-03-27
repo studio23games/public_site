@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {LandingComponent} from "./components/@routed/landing/landing.component";
+import {LandingComponent} from "./components";
 
 const routes: Routes = [
   {
@@ -20,3 +20,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
+

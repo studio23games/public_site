@@ -35,11 +35,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/leaflet/dist/leaflet.css",
               "node_modules/normalize.css/normalize.css",
               "@fortawesome/fontawesome-free/css/all.css",
               "src/styles.scss"
             ],
             "scripts": [
+              "node_modules/leaflet/dist/leaflet.js"
             ]
           },
           "configurations": {

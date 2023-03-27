@@ -6,6 +6,7 @@ import {ModalComponent} from "./modal/modal.component";
 import {PanelComponent} from "./panel/panel.component";
 import {SectionComponent} from "./section/section.component";
 import {CheckmarkComponent} from "./checkmark/checkmark.component";
+import {ToastComponent} from "./toast/toast.component";
 
 export const components = [
   ConfirmationComponent,
@@ -15,7 +16,8 @@ export const components = [
   ModalComponent,
   PanelComponent,
   SectionComponent,
-  CheckmarkComponent
+  CheckmarkComponent,
+  ToastComponent
 ]
 
 export * from './confirmation/confirmation.component';
@@ -25,6 +27,7 @@ export * from './form-label/form-label.component';
 export * from './modal/modal.component';
 export * from './panel/panel.component';
 export * from './checkmark/checkmark.component';
+export * from './toast/toast.component';
 
 export * from './@routed';
 export * from './@sections';

@@ -1,5 +1,10 @@
 ﻿@import 'theme';
 
+$discord: #404eed;
+$youtube: #ff0000;
+$twitter: #1d9bf0;
+$twitch: #a970ff;
+
 .link-wrapper {
   background-color: $darkest;
   border-radius: 6px;
@@ -22,22 +27,16 @@
 
 }
 
-$discord: #404eed;
-$youtube: #ff0000;
-$twitter: #1d9bf0;
-$twitch: #a970ff;
 section {
   user-select: none;
   height: 100%;
   padding: $padding;
   cursor: pointer;
-
   min-height: 300px;
 
   @include tablet {
     min-height: unset;
   }
-
 
   &:hover {
     background-image: linear-gradient(0deg, transparent, transparentize($text, 0.55));
@@ -48,42 +47,41 @@ section {
     font-size: 1.3em;
     border: 3px solid $text;
     display: grid;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: 3fr 2fr;
     height: 100%;
-
-    .icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
     h2 {
+      text-align: center;
+      margin: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin: 0;
-      text-align: center;
+      align-items: flex-start;
     }
-  }
-
-
-  & > div {
-    font-size: 1.3em;
-    border: 3px solid $text;
-    display: grid;
-    grid-template-rows: 1fr min-content;
-    height: 100%;
 
     div {
-      &:first-of-type {
-        font-size: 3em;
-      }
-
       padding: $padding;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+
+      &:first-of-type {
+        font-size: 3.5em;
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        text-align: center;
+      }
     }
   }
 }

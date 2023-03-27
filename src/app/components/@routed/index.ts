@@ -5,4 +5,3 @@ export const routedComponents = [
 ];
 
 export * from './landing/landing.component';
-

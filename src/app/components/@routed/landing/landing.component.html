@@ -7,12 +7,15 @@
 <app-section [backgroundColor]="'#fa5b3d'" [bottomBorder]="true" [topBorder]="true">
   <app-project-section></app-project-section>
 </app-section>
+<app-section [topBorder]="true" [bottomBorder]="true">
+  <app-studio-section></app-studio-section>
+</app-section>
 <app-section>
   <app-social-media-section></app-social-media-section>
 </app-section>
 
 <app-modal [modalVisible$]="show$" (closeIntent)="closeModal()">
-  <form [formGroup]="mailForm" (ngSubmit)="submitForm()">
+  <form [formGroup]="mailForm">
     <app-form-label heading="E-mail" issue="Must be a valid E-mail" [valid]="emailValid()">
       <input type="text" formControlName="email">
     </app-form-label>
@@ -21,10 +24,10 @@
       <input type="text" formControlName="repeat">
     </app-form-label>
     <app-checkmark formControlName="accept"
-                   description="I want to receive news and updates from Studio 23 about their products">
+                   description="I want to receive newsletter updates from Studio23 Games">
     </app-checkmark>
     <div class="btn-row">
-      <button class="form-submit" (click)="submitForm()">Submit</button>
+      <button class="form-submit" (click)="submitForm()" role="button">Submit</button>
     </div>
   </form>
 </app-modal>

@@ -31,7 +31,7 @@ export class CheckmarkComponent implements OnInit, ControlValueAccessor {
   }
 
   registerOnChange(fn: any): void {
-    this.onTouched = fn;
+    this.onChange = fn;
   }
 
   registerOnTouched(fn: any): void {

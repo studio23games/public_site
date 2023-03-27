@@ -1,0 +1,25 @@
+﻿@import 'theme';
+
+.toast-message {
+  position: fixed;
+  bottom: $padding;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: $padding;
+  background-color: $background;
+  box-shadow: 4px 4px 4px -2px #121212;
+  z-index: 100000;
+  font-size: 1.5em;
+  border: 1px solid $brand;
+  text-transform: capitalize;
+
+  &.success {
+    color: limegreen;
+  }
+
+  &.fail {
+    color: indianred;
+  }
+
+
+}

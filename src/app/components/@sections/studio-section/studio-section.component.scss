@@ -1,0 +1,42 @@
+﻿@import 'theme';
+
+
+#leaflet {
+  height: 510px;
+  @include mobile {
+
+  }
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: $padding;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
+
+  ::ng-deep {
+    .panel-wrapper {
+      margin: 0;
+    }
+  }
+}
+
+.pinned {
+  background-image: url("/assets/animal.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 150px;
+  background-blend-mode: color-burn;
+
+  @include tablet {
+    background-image: none;
+  }
+}
+
+
+
+

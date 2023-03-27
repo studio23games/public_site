@@ -1,6 +1,5 @@
 ﻿import {Component, OnInit} from '@angular/core';
-import {UiStateService} from "../../../services/ui-state.service";
-import {ConfirmService} from "../../../services/confirm.service";
+import {SignUpService, UiStateService} from "../../../services";
 import {filter, Observable} from "rxjs";
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 
@@ -8,19 +7,16 @@ import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/form
   templateUrl: 'landing.component.html',
   styleUrls: ['landing.component.scss']
 })
-
 export class LandingComponent implements OnInit {
-
   show$: Observable<boolean>
   mailForm: FormGroup;
 
-
-  constructor(private uiService: UiStateService, private fb: FormBuilder, private confirmService: ConfirmService) {
+  constructor(private uiService: UiStateService, private fb: FormBuilder, private mail: SignUpService) {
     this.show$ = uiService.getShowForm$();
     this.mailForm = fb.group({
       email: fb.nonNullable.control('', [Validators.required, Validators.email]),
       repeat: fb.nonNullable.control('', [Validators.required, sameValueValidator("email")]),
-      accept: fb.nonNullable.control(false, [Validators.required]),
+      accept: fb.nonNullable.control(false, [Validators.requiredTrue]),
     });
     this.show$.pipe(filter(t => t)).subscribe(() => {
       this.mailForm.reset();
@@ -44,9 +40,11 @@ export class LandingComponent implements OnInit {
 
   submitForm() {
     if (this.mailForm.valid) {
-      const {email, news, releases} = this.mailForm.getRawValue();
-      this.closeModal();
-      // TODO: POST EMAIL
+      const {email} = this.mailForm.getRawValue();
+      this.mail.registerEmail({email}).subscribe(r => {
+        if (r)
+          this.closeModal();
+      });
     }
   }
 

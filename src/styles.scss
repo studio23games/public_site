@@ -16,7 +16,7 @@
 
 :root {
   font-family: Dosis, sans-serif;
-  font-size: 12pt;
+  font-size: 13pt;
   color: $text;
 }
 
@@ -35,6 +35,11 @@ body, html {
   max-width: $width-breakpoint;
   width: 100%;
   margin: 0 auto;
+
+  @include tablet {
+    padding: 0 calc($padding / 2);
+  }
+
 }
 
 .f-horiz-between {
@@ -82,4 +87,8 @@ input[type=text] {
 
 .center-text {
   text-align: center;
+}
+
+.leaflet-pane.leaflet-shadow-pane {
+  display: none;
 }

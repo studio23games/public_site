@@ -13,10 +13,10 @@ import {directives} from "./directives";
 @NgModule({
   declarations: [
     AppComponent,
-    ...components,
     ...routedComponents,
+    ...components,
+    ...sectionComponents,
     ...directives,
-    ...sectionComponents
   ],
   imports: [
     BrowserModule,
